@@ -40,7 +40,6 @@
   behaviors {
     mcopy: mod_copy {
       compatible = "zmk,behavior-mod-morph";
-      label = "MOD_COPY";
       #binding-cells = <0>;
       bindings = <&kp C>, <&kp C_AC_COPY>;
       mods = <(MOD_LGUI|MOD_RGUI)>;
@@ -48,7 +47,6 @@
 
     mpaste: mod_paste {
       compatible = "zmk,behavior-mod-morph";
-      label = "MOD_PASTE";
       #binding-cells = <0>;
       bindings = <&kp V>, <&kp K_PASTE>;
       mods = <(MOD_LGUI|MOD_RGUI)>;
@@ -56,7 +54,6 @@
 
     lmt: layer_mod_tap {
       compatible = "zmk,behavior-hold-tap";
-      label = "LAYER_MOD_TAP";
       #binding-cells = <2>;
       flavor = "hold-preferred";
       tapping-term-ms = <200>;
