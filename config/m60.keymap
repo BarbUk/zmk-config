@@ -6,7 +6,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define none &none
 #define ____ &trans
@@ -26,6 +26,14 @@
 #define M_LCLK &mkp LCLK
 #define M_RCLK &mkp RCLK
 #define M_MCLK &mkp MCLK
+// Define Mouse move
+#define M_UP &mmv MOVE_UP
+#define M_DOWN &mmv MOVE_DOWN
+#define M_LEFT &mmv MOVE_LEFT
+#define M_RIGHT &mmv MOVE_RIGHT
+// Define Mouse scroll
+#define SC_UP &msc SCRL_UP
+#define SC_DOWN &msc SCRL_DOWN
 
 / {
 
@@ -115,16 +123,16 @@ ____       ____       ____       ____                                           
     // |────────┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴────────────|
     // |          |     |     |     |     | 🥾  |  ↡  |     |     |     |     |                |
     // |──────┬───┴──┬──┴──┬──┴─────┴─────┴─────┴─────┴─────┴───┬─┴─────┼─────┴┬──────┬────────|
-    // |      |      |     |           studio unlock            |       |      |      |        |
+    // |      |      |     |                                    |       |      |      |        |
     // ╰──────┴──────┴─────┴────────────────────────────────────┴───────┴──────┴──────┴────────╯
 
     alt_layer {
       bindings = <
-none none none none none none none none none none _(C_ASPECT) _(C_BRI_DEC) _(C_BRI_INC) &sys_reset
-none none none none none none none M_LCLK M_MCLK M_RCLK none none none none
-none none none none none none none none none none none none none
-none none none none none &bootloader none none none none none none
-none none none           &studio_unlock             none none none none
+        &bl BL_TOG &bl BL_CYCLE none none none none none none none none _(C_ASPECT) _(C_BRI_DEC) _(C_BRI_INC) &sys_reset
+        none none none none none none none M_LCLK M_UP M_RCLK none none none none
+        none none none none none none SC_UP M_LEFT M_DOWN M_RIGHT none none none
+        none none none none none &bootloader SC_UP none none none none none
+        none none none           none             none none none none
       >;
     };
 
