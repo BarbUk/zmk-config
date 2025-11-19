@@ -129,7 +129,7 @@
         &bl BL_TOG &bl BL_CYCLE none none none none none none none none _(C_ASPECT) _(C_BRI_DEC) _(C_BRI_INC) &sys_reset
         none none none none none none none M_LCLK M_UP M_RCLK none none none none
         none none none none none none SC_UP M_LEFT M_DOWN M_RIGHT none none none
-        none none none none none &bootloader SC_UP none none none none none
+        none none none none none &bootloader SC_DOWN none none none none none
         none none none           none             none none none none
       >;
     };
