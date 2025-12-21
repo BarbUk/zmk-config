@@ -74,10 +74,15 @@ repos:
     hooks:
       - id: oxipng
         args: ["-o", "4", "--strip", "safe", "--alpha"]
+  # Github actions
   - repo: https://github.com/rhysd/actionlint
     rev: v1.7.9
     hooks:
       - id: actionlint-system
+  - repo: https://github.com/zizmorcore/zizmor-pre-commit
+    rev: v1.19.0
+    hooks:
+      - id: zizmor
   # Markdown
   - repo: https://github.com/hukkin/mdformat
     rev: 1.0.0
