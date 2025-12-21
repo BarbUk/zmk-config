@@ -95,4 +95,5 @@ repos:
     hooks:
       - id: rumdl-fmt
         args:
-          - --disable MD013
+          - --disable
+          - MD013
