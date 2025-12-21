@@ -88,5 +88,5 @@ repos:
   - repo: https://github.com/rvben/rumdl-pre-commit
     rev: v0.0.197
     hooks:
-      - id: rumdl
-        args: ["--fix"]
+      - id: rumdl-fmt
+        args: ["--disable MD013"]
