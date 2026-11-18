@@ -1,19 +1,19 @@
 fail_fast: false
 repos:
   - repo: https://github.com/Lucas-C/pre-commit-hooks
-    rev: v1.5.5
+    rev: ad1b27d73581aa16cca06fc4a0761fc563ffe8e8 # frozen: v1.5.6
     hooks:
       - id: remove-tabs
         exclude: "vendor-prefixes\\.txt$|.git/COMMIT_EDITMSG"
   - repo: https://github.com/pre-commit/mirrors-clang-format
-    rev: v21.1.8
+    rev: ce4bd7270237e95464b37d808b942f02785192c4 # frozen: v23.1.5
     hooks:
       - id: clang-format
         types_or: [c++, c]
         args:
           - -i
   - repo: https://github.com/rbubley/mirrors-prettier
-    rev: v3.7.4
+    rev: 331f33fa4dfbcbca7c3da3620c137fde0faab273 # frozen: v3.9.10
     hooks:
       - id: prettier
         exclude: |
@@ -23,11 +23,11 @@ repos:
               .release-please-manifest.json
           )$
   - repo: https://github.com/jorisroovers/gitlint
-    rev: v0.19.1
+    rev: acc9d9de6369b76d22cb4167029d2035e8730b98 # frozen: v0.19.1
     hooks:
       - id: gitlint
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v6.0.0
+    rev: 3e8a8703264a2f4a69428a0aa4dcb512790b2c8c # frozen: v6.0.0
     hooks:
       - id: check-added-large-files
       - id: check-case-conflict
@@ -49,49 +49,49 @@ repos:
           - --autofix
   # YAML
   - repo: https://github.com/adrienverge/yamllint.git
-    rev: v1.37.1
+    rev: cba56bcde1fdd01c1deb3f945e69764c291a6530 # frozen: v1.38.0
     hooks:
       - id: yamllint
         args: ["-d relaxed"]
   - repo: https://github.com/google/yamlfmt
-    rev: v0.20.0
+    rev: 21ca5323a9c87ee37a434e0ca908efc0a89daa07 # frozen: v0.21.0
     hooks:
       - id: yamlfmt
         language: system
   # EditorConfig
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 3.6.0
+    rev: e8b4e28241a9ae8296ba6e4a491b5da4eda73283 # frozen: 3.11.1
     hooks:
       - id: editorconfig-checker
   # Spelling
   - repo: https://github.com/crate-ci/typos
-    rev: typos-dict-v0.13.13
+    rev: 4c8b7f51ca60df14e3c5ca82770dfbbe6c3dae85 # frozen: v1.52.0
     hooks:
       - id: typos
   # Png
   - repo: https://github.com/oxipng/oxipng
-    rev: v10.0.0
+    rev: 36f3ef8aac65ecf1761739ea2f2e530281f1312b # frozen: v10.2.1
     hooks:
       - id: oxipng
         args: ["-o", "4", "--strip", "safe", "--alpha"]
   # Github actions
   - repo: https://github.com/rhysd/actionlint
-    rev: v1.7.9
+    rev: 914e7df21a07ef503a81201c76d2b11c789d3fca # frozen: v1.7.12
     hooks:
       - id: actionlint-system
   - repo: https://github.com/zizmorcore/zizmor-pre-commit
-    rev: v1.19.0
+    rev: 06a39750ec31860bb44f2acf67182c40016cd1e7 # frozen: v1.32.0
     hooks:
       - id: zizmor
   # Markdown
   - repo: https://github.com/hukkin/mdformat
-    rev: 1.0.0
+    rev: 82912cdaea4fb830f751504486a7879c70526547 # frozen: 1.0.0
     hooks:
       - id: mdformat
         additional_dependencies:
           - mdformat-config
   - repo: https://github.com/rvben/rumdl-pre-commit
-    rev: v0.0.197
+    rev: b0cff962ee693b9e612c097d22e71e0cba127447 # frozen: v0.3.2
     hooks:
       - id: rumdl-fmt
         args:
