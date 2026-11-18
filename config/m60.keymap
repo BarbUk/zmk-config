@@ -6,8 +6,10 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/backlight.h>
+#include <dt-bindings/zmk/rgb.h>
 
 #define none &none
 #define ____ &trans
@@ -113,11 +115,11 @@
 
     // # layer 2 - Tools and bootloader
     // ╭─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────────╮
-    // | 💡 |     |     |     |     |     |     |     |     |     |  🖵 | 🔅 |  🔆 |  RESET  |
+    // | 💡  | EFF | BR- | BR+ | HU- | HU+ | SA- | SA+ | SP- | SP+ |  🖵  | 🔅  |  🔆 |  RESET  |
     // |─────┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───────|
-    // |       |  ‹  | 🖱️↑ |  ›  |     |     |     |  ‹ | 🖱️↑ |  ›  |     |     |     |       |
+    // |       |  ‹  | 🖱️↑ |  ›  |     |     |     |  ‹  | 🖱️↑ |  ›  |     |     |     |       |
     // |───────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴───────|
-    // |        |🖱️← |🖱️↓ |🖱️→ |     |     |  ↟  |🖱️←| 🖱️↓ |🖱️→|     |     |            |
+    // |        |🖱️←  |🖱️↓  |🖱️→  |     |     |  ↟  |🖱️←  | 🖱️↓ |🖱️→  |     |     |            |
     // |────────┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴────────────|
     // |          |     |     |     |     | 🥾  |  ↡  |     |     |     |     |                |
     // |──────┬───┴──┬──┴──┬──┴─────┴─────┴─────┴─────┴─────┴───┬─┴─────┼─────┴┬──────┬────────|
@@ -126,9 +128,9 @@
 
     alt_layer {
       bindings = <
-        &bl BL_TOG &bl BL_CYCLE none none none none none none none none _(C_ASPECT) _(C_BRI_DEC) _(C_BRI_INC) &sys_reset
-        none none none none none none none M_LCLK M_UP M_RCLK none none none none
-        none none none none none none SC_UP M_LEFT M_DOWN M_RIGHT none none none
+        &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_SPD &rgb_ug RGB_SPI _(C_ASPECT) _(C_BRI_DEC) _(C_BRI_INC) &sys_reset
+        none M_LCLK M_UP M_RCLK none none none M_LCLK M_UP M_RCLK none none none none
+        none M_LEFT M_DOWN M_RIGHT none none SC_UP M_LEFT M_DOWN M_RIGHT none none none
         none none none none none &bootloader SC_DOWN none none none none none
         none none none           none             none none none none
       >;

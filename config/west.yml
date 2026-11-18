@@ -5,7 +5,7 @@ manifest:
   projects:
     - name: zmk
       remote: BarbUk
-      revision: m60
+      revision: m60_rgb
       import: app/west.yml
   self:
     path: config
