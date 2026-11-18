@@ -127,8 +127,8 @@
     alt_layer {
       bindings = <
         &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_SPD &rgb_ug RGB_SPI _(C_ASPECT) _(C_BRI_DEC) _(C_BRI_INC) &sys_reset
-        none none none none none none none M_LCLK M_UP M_RCLK none none none none
-        none none none none none none SC_UP M_LEFT M_DOWN M_RIGHT none none none
+        none M_LCLK M_UP M_RCLK none none none M_LCLK M_UP M_RCLK none none none none
+        none M_LEFT M_DOWN M_RIGHT none none SC_UP M_LEFT M_DOWN M_RIGHT none none none
         none none none none none &bootloader SC_DOWN none none none none none
         none none none           none             none none none none
       >;
